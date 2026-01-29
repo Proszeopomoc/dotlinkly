@@ -11,838 +11,855 @@
   <body>
   <!doctype html>
 <html lang="pl">
-
 <head>
-	<meta charset="UTF-20" />
-	<meta name="viewport" content="width=device-width, initial-scale=3.0" />
-	<title>DotLinkly – Connect your dots</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ <title>Program lojalnościowy bez kart i aplikacji | Nowoczesny system zbierania leadów i opinii klientów</title>
+  <meta name="description" content="Odkryj nowoczesne rozwiązania dla firm: program lojalnościowy bez konieczności kart i aplikacji, system do szybkiego zbierania kontaktów na targach, zarządzania procesami, zgłaszania awarii oraz zbierania opinii klientów. Efektywne narzędzia do automatyzacji i generowania leadów." />
+  <meta name="keywords" content="program lojalnościowy bez konieczności kart i aplikacji, program lojalnościowy online bez kart, system lojalnościowy bez aplikacji mobilnej, prosty program lojalnościowy dla klientów, nowoczesny system zbierania leadów, system generowania leadów dla firm, automatyczne zbieranie leadów na targach, efektywne narzędzia do lead, system do szybkiego zbierania kontaktów na targach, zbieranie kontaktów na eventach i targach, szybki system leadów na konferencjach, narzędzie do pozyskiwania kontaktów biznesowych, system do zgłaszania awarii w firmie, zgłaszanie usterek i awarii online, system raportowania problemów w przedsiębiorstwie, narzędzie do zarządzania awariami w firmie, rozwiązanie dla firm z procesami, optymalizacja procesów biznesowych w firmie, narzędzia do automatyzacji procesów firmowych, systemy wspierające procesy w przedsiębiorstwie, zarządzanie procesami w firmie, system zarządzania procesami biznesowymi, narzędzia do monitorowania procesów firmowych, efektywne zarządzanie workflow w firmie, system do zbierania opinii klientów, narzędzie do gromadzenia feedbacku od klientów, system ankiet i opinii klientów online, automatyczne zbieranie recenzji od klientów" />
 
-	<!-- PROTOTYP ONLY -->
-	<script src="https://cdn.tailwindcss.com"></script>
+  <!-- Open Graph / social preview -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pl_PL" />
+  <meta property="og:site_name" content="DotLinkly" />
+  <meta property="og:title" content="Program lojalnościowy bez kart i aplikacji | DotLinkly" />
+  <meta property="og:description" content="Tap → 1–4 pytania → routing → ślad czasu. System do zbierania leadów i opinii bez aplikacji." />
+  <meta property="og:url" content="https://dotlinkly.com/" />
 
-	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Program lojalnościowy bez kart i aplikacji | DotLinkly" />
+  <meta name="twitter:description" content="Tap → 1–4 pytania → routing → ślad czasu. System do zbierania leadów i opinii bez aplikacji." />
 
-	<style>
-		html {
-			scroll-behavior: smooth;
-		}
+  <link rel="canonical" href="https://dotlinkly.com/" />
+  <meta name="robots" content="index,follow" />
 
-		body {
-			font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-		}
+  <!-- PROTOTYP ONLY -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-		/* ===== Theme system (A/B) ===== */
-		:root {
-			--bg: #050816;
-			--fg: #eaf0ff;
-			--muted: rgba(234, 240, 255, .72);
-			--card: rgba(255, 255, 255, .06);
-			--card2: rgba(255, 255, 255, .08);
-			--border: rgba(255, 255, 255, .12);
-			--accent1: #4f46e5;
-			/* indigo */
-			--accent2: #06b6d4;
-			/* cyan */
-			--accent3: #22c55e;
-			/* green */
-			--danger: #fb7185;
-			--shadow: 0 20px 60px rgba(0, 0, 0, .45);
-			--shadow2: 0 14px 40px rgba(0, 0, 0, .35);
-			--ring: rgba(79, 70, 229, .35);
-		}
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
 
-		[data-theme="B"] {
-			--accent1: #8b5cf6;
-			/* violet */
-			--accent2: #ec4899;
-			/* fuchsia */
-			--accent3: #f59e0b;
-			/* amber */
-			--ring: rgba(236, 72, 153, .28);
-		}
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color: var(--fg); }
 
-		.bg-aurora {
-			background:
-				radial-gradient(1000px 600px at 15% 10%, rgba(79, 70, 229, .40), transparent 55%),
-				radial-gradient(900px 520px at 85% 20%, rgba(6, 182, 212, .35), transparent 55%),
-				radial-gradient(900px 520px at 55% 90%, rgba(34, 197, 94, .18), transparent 60%),
-				linear-gradient(180deg, #050816 0%, #070a1d 60%, #06081a 100%);
-		}
+    /* ===== Theme system (A/B/C) ===== */
+    :root{
+      --bg: #050816;
+      --fg: #eaf0ff;
+      --muted: rgba(234,240,255,.72);
+      --card: rgba(255,255,255,.06);
+      --card2: rgba(255,255,255,.08);
+      --border: rgba(255,255,255,.12);
 
-		.bg-grid {
-			background-image:
-				linear-gradient(to right, rgba(255, 255, 255, .06) 1px, transparent 1px),
-				linear-gradient(to bottom, rgba(255, 255, 255, .06) 1px, transparent 1px);
-			background-size: 44px 44px;
-			mask-image: radial-gradient(circle at 50% 20%, black 0%, transparent 65%);
-			opacity: .35;
-			pointer-events: none;
-		}
+      --accent1: #4f46e5; /* indigo */
+      --accent2: #06b6d4; /* cyan */
+      --accent3: #22c55e; /* green */
+      --danger:  #fb7185;
 
-		.glass {
-			background: var(--card);
-			border: 1px solid var(--border);
-			backdrop-filter: blur(14px);
-			-webkit-backdrop-filter: blur(14px);
-			box-shadow: var(--shadow2);
-		}
+      --shadow: 0 20px 60px rgba(0,0,0,.45);
+      --shadow2: 0 14px 40px rgba(0,0,0,.35);
+      --ring: rgba(79,70,229,.35);
 
-		.glass2 {
-			background: var(--card2);
-			border: 1px solid var(--border);
-			backdrop-filter: blur(14px);
-			-webkit-backdrop-filter: blur(14px);
-		}
+      --gridLine: rgba(255,255,255,.06);
+    }
+    [data-theme="B"]{
+      --accent1: #8b5cf6; /* violet */
+      --accent2: #ec4899; /* fuchsia */
+      --accent3: #f59e0b; /* amber */
+      --ring: rgba(236,72,153,.28);
+    }
 
-		.text-grad {
-			background: linear-gradient(90deg, var(--accent1), var(--accent2));
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
-		}
+    /* Theme C: black/white (light, minimal) */
+    [data-theme="C"]{
+      --bg: #ffffff;
+      --fg: #0b0b0f;
+      --muted: rgba(11,11,15,.70);
+      --card: rgba(0,0,0,.03);
+      --card2: rgba(0,0,0,.04);
+      --border: rgba(0,0,0,.10);
 
-		.btn-primary {
-			background: linear-gradient(90deg, var(--accent1), var(--accent2));
-			box-shadow: 0 12px 30px rgba(79, 70, 229, .28);
-		}
+      --accent1: #111827; /* near-black */
+      --accent2: #111827; /* keep monochrome */
+      --accent3: #111827;
+      --ring: rgba(17,24,39,.22);
 
-		[data-theme="B"] .btn-primary {
-			box-shadow: 0 12px 30px rgba(236, 72, 153, .22);
-		}
+      --shadow: 0 20px 60px rgba(0,0,0,.10);
+      --shadow2: 0 14px 40px rgba(0,0,0,.08);
 
-		.btn-primary:hover {
-			filter: brightness(1.05);
-			transform: translateY(-1px);
-		}
+      --gridLine: rgba(0,0,0,.05);
+    }
 
-		.btn-ghost {
-			background: rgba(255, 255, 255, .06);
-			border: 1px solid rgba(255, 255, 255, .14);
-		}
+    .bg-aurora{
+      background:
+        radial-gradient(1000px 600px at 15% 10%, rgba(79,70,229,.40), transparent 55%),
+        radial-gradient(900px 520px at 85% 20%, rgba(6,182,212,.35), transparent 55%),
+        radial-gradient(900px 520px at 55% 90%, rgba(34,197,94,.18), transparent 60%),
+        linear-gradient(180deg, #050816 0%, #070a1d 60%, #06081a 100%);
+    }
+    [data-theme="C"] .bg-aurora{
+      background:
+        radial-gradient(1000px 600px at 15% 10%, rgba(0,0,0,.04), transparent 55%),
+        radial-gradient(900px 520px at 85% 20%, rgba(0,0,0,.03), transparent 55%),
+        radial-gradient(900px 520px at 55% 90%, rgba(0,0,0,.025), transparent 60%),
+        linear-gradient(180deg, #ffffff 0%, #fbfbfb 60%, #ffffff 100%);
+    }
 
-		.btn-ghost:hover {
-			background: rgba(255, 255, 255, .09);
-		}
+    .bg-grid{
+      background-image:
+        linear-gradient(to right, var(--gridLine) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--gridLine) 1px, transparent 1px);
+      background-size: 44px 44px;
+      mask-image: radial-gradient(circle at 50% 20%, black 0%, transparent 65%);
+      opacity: .35;
+      pointer-events:none;
+    }
 
-		.fade {
-			animation: fade .18s ease-out;
-		}
+    .glass{
+      background: var(--card);
+      border: 1px solid var(--border);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      box-shadow: var(--shadow2);
+    }
+    .glass2{
+      background: var(--card2);
+      border: 1px solid var(--border);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
 
-		@keyframes fade {
-			from {
-				opacity: 0;
-				transform: translateY(6px);
-			}
+    .text-grad{
+      background: linear-gradient(90deg, var(--accent1), var(--accent2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
 
-			to {
-				opacity: 1;
-				transform: translateY(0);
-			}
-		}
+    .btn-primary{
+      background: linear-gradient(90deg, var(--accent1), var(--accent2));
+      box-shadow: 0 12px 30px rgba(79,70,229,.28);
+      color: #fff;
+    }
+    [data-theme="B"] .btn-primary{
+      box-shadow: 0 12px 30px rgba(236,72,153,.22);
+    }
+    [data-theme="C"] .btn-primary{
+      box-shadow: 0 12px 30px rgba(0,0,0,.10);
+      color: #fff;
+    }
+    .btn-primary:hover{ filter: brightness(1.05); transform: translateY(-1px); }
 
-		.ring-soft:focus {
-			outline: none;
-			box-shadow: 0 0 0 4px var(--ring);
-			border-color: rgba(255, 255, 255, .25);
-		}
+    .btn-ghost{
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.14);
+    }
+    [data-theme="C"] .btn-ghost{
+      background: rgba(0,0,0,.03);
+      border: 1px solid rgba(0,0,0,.12);
+    }
+    .btn-ghost:hover{ background: rgba(255,255,255,.09); }
+    [data-theme="C"] .btn-ghost:hover{ background: rgba(0,0,0,.05); }
 
-		/* Small “AI chip” pills */
-		.chip {
-			background: rgba(255, 255, 255, .06);
-			border: 1px solid rgba(255, 255, 255, .14);
-		}
+    .fade { animation: fade .18s ease-out; }
+    @keyframes fade { from { opacity:0; transform: translateY(6px);} to { opacity:1; transform: translateY(0);} }
 
-		.chip strong {
-			color: var(--fg);
-		}
+    .ring-soft:focus{
+      outline: none;
+      box-shadow: 0 0 0 4px var(--ring);
+      border-color: rgba(255,255,255,.25);
+    }
+    [data-theme="C"] .ring-soft:focus{
+      border-color: rgba(0,0,0,.18);
+    }
 
-		/* Make anchors visible on dark bg */
-		a {
-			color: inherit;
-		}
-	</style>
+    .chip{
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.14);
+    }
+    [data-theme="C"] .chip{
+      background: rgba(0,0,0,.03);
+      border: 1px solid rgba(0,0,0,.12);
+    }
+    .chip strong{ color: var(--fg); }
+
+    a{ color: inherit; }
+
+    /* Theme C: neutralize tailwind's text-white usage in markup */
+    [data-theme="C"] .text-white { color: var(--fg) !important; }
+    [data-theme="C"] .placeholder\:text-white\/50::placeholder { color: rgba(11,11,15,.45) !important; }
+    [data-theme="C"] .border-white\/10 { border-color: rgba(0,0,0,.10) !important; }
+    [data-theme="C"] .bg-white\/5 { background: rgba(0,0,0,.03) !important; }
+
+    /* ===== THEME C: full white / black ===== */
+    [data-theme="C"] .bg-aurora{ background:#fff !important; }
+    [data-theme="C"] .bg-grid{ display:none !important; }
+
+    [data-theme="C"] body,
+    [data-theme="C"] #app{
+      background:#fff !important;
+      color:#0b0b0f !important;
+    }
+
+    /* Tailwind overrides (masz dużo text-white w markup) */
+    [data-theme="C"] .text-white{ color:#0b0b0f !important; }
+    [data-theme="C"] a,
+    [data-theme="C"] button,
+    [data-theme="C"] summary,
+    [data-theme="C"] input,
+    [data-theme="C"] textarea{
+      color:#0b0b0f !important;
+    }
+
+    /* Inputs */
+    [data-theme="C"] .bg-white\/5{ background: rgba(0,0,0,.03) !important; }
+    [data-theme="C"] .border-white\/10{ border-color: rgba(0,0,0,.10) !important; }
+    [data-theme="C"] .placeholder\:text-white\/50::placeholder{ color: rgba(11,11,15,.45) !important; }
+
+    /* Buttons */
+    [data-theme="C"] .btn-primary{
+      background:#111827 !important;
+      color:#fff !important;
+      box-shadow: 0 12px 30px rgba(0,0,0,.10) !important;
+    }
+    [data-theme="C"] .btn-ghost{
+      background: rgba(0,0,0,.03) !important;
+      border: 1px solid rgba(0,0,0,.12) !important;
+      color:#0b0b0f !important;
+    }
+  </style>
 </head>
 
-<body class="bg-aurora text-white antialiased" data-theme="A">
-	<div class="absolute inset-0 bg-grid"></div>
-	<div id="app" class="relative"></div>
+<body class="bg-aurora antialiased" data-theme="A">
+  <div class="absolute inset-0 bg-grid"></div>
+  <div id="app" class="relative"></div>
 
-	<script>
-		const COMPANY = {
-			legalName: "RAKSO SP. Z O.O.",
-			krs: "0000846551",
-			nip: "7010987678",
-			regon: "38634714",
-			email: "dot@dotlinkly.com",
-			phone: "883 373 955"
-		};
-		const COPY = {
-			pl: {
-				switchTo: "EN",
-				brand: {
-					name: "DotLinkly",
-					tagline: "Connect your dots",
-					logo: "D"
-				},
-				nav: {
-					links: [{
-							id: "leadgen",
-							label: "Dla kogo"
-						},
-						{
-							id: "how",
-							label: "Jak działa"
-						},
-						{
-							id: "contact",
-							label: "Kontakt"
-						}
-					],
-					cta: "Umów rozmowę →"
-				},
-				hero: {
-					h1: `Każdego dnia tracisz potencjalne zyski...<br><br>
-Zmień to! Monitorując, aktywność, obecność i ułatwiając feedback...`,
-					sub: `Tap → 1–4 pytania → routing → ślad czasu.<br>15–25 sekund i masz sygnał. Brak interakcji przez miesiąc? To też sygnał.`,
-					pills: ["Bez aplikacji", "15–25 sekund", "Ślad czasu"],
-					micro: `Connect your dots. Minimum tarcia. Maksimum sygnału.`,
-					cta: "Przetestuj flow ↓"
-				},
-				leadgen: {
-					title: "Jaką rolę pełnisz?",
-					subtitle: "Kliknij jedną opcję — pokażemy dopasowany efekt.",
-					roles: [{
-							id: "smb",
-							label: "Właściciel (1–10 lokalizacji)",
-							resultTitle: "Mniej chaosu, więcej sygnału.",
-							bullets: ["Zgłoszenia bez logowania", "Routing do osoby", "Historia zdarzeń"],
-							cta: "Umów demo pod 1 lokalizację"
-						},
-						{
-							id: "coo",
-							label: "COO / sieć (10+)",
-							resultTitle: "Porównania + alarmy ciszy.",
-							bullets: ["Standaryzacja", "Alarm: brak aktywności", "Dowód zamiast obietnic"],
-							cta: "Umów demo pod sieć"
-						},
-						{
-							id: "fm",
-							label: "Utrzymanie / facility",
-							resultTitle: "Szybsze domykanie zadań.",
-							bullets: ["Kompletne zgłoszenie", "Kolejki / routing", "Status + czas"],
-							cta: "Pokaż routing"
-						},
-						{
-							id: "bhp",
-							label: "BHP / compliance",
-							resultTitle: "Near-miss i audyt z minimalnym tarciem.",
-							bullets: ["Anonimowo lub po zgodzie", "Czas + miejsce", "Eksport"],
-							cta: "Umów demo BHP"
-						},
-						{
-							id: "other",
-							label: "Inne",
-							resultTitle: "Opisz w 1 zdaniu, czego chcesz pilnować.",
-							bullets: ["Jaki problem?", "Jaka skala?", "Kto ma dostać zgłoszenie?"],
-							cta: "Wyślij opis"
-						}
-					],
-					form: {
-						title: "Kontakt",
-						note: "Nie zapisujemy nic dopóki sam nie wyślesz formularza.",
-						emailPh: "Email (wymagane)",
-						otherPh: "Telefon / LinkedIn (opcjonalnie)",
-						msgPh: "1 zdanie: co chcesz mierzyć? (opcjonalnie)",
-						submit: "Wyślij",
-						sent: "Wysłane ✓"
-					}
-				},
-				how: {
-					title: "Jak to działa",
-					steps: [{
-							t: "1) Tap w miejscu",
-							d: "Na ladzie, w toalecie, na drzwiach, przy maszynie."
-						},
-						{
-							t: "2) 15–25 sekund",
-							d: "Bez logowania, bez aplikacji, bez tarcia."
-						},
-						{
-							t: "3) Routing",
-							d: "Trafia do właściwej osoby / kolejki."
-						},
-						{
-							t: "4) Ślad",
-							d: "Masz czas i historię — zamiast ustaleń na czacie."
-						}
-					]
-				},
-				contact: {
-					title: "Kontakt",
-					sub: "Krótko. Bez spamu. Bez sprzedażowej papki."
-				},
-				footer: {
-					links: [{
-							href: "#privacy",
-							label: "Polityka prywatności"
-						},
-						{
-							href: "#cookies",
-							label: "Polityka cookies"
-						},
-						{
-							href: "#terms",
-							label: "Regulamin"
-						}
-					],
-					note: "© 2026 DotLinkly"
-				},
-				legal: {
-					privacyTitle: "Polityka prywatności (skrót)",
-					privacyBody: `Strona ma charakter informacyjny. Dane podajesz wyłącznie dobrowolnie poprzez formularz kontaktowy. Nie zbieramy danych w tle. Logi serwera mogą zawierać standardowe metadane techniczne (np. IP) wymagane do bezpieczeństwa i utrzymania.`,
-					cookiesTitle: "Polityka cookies (skrót)",
-					cookiesBody: `Używamy cookies technicznych niezbędnych do działania strony (np. zapamiętanie języka). Cookies analityczne/marketingowe są domyślnie wyłączone i włączą się dopiero po Twojej zgodzie.`,
-					termsTitle: "Regulamin (skrót)",
-					termsBody: `To nie jest sklep ani e-commerce. Strona prezentuje usługę i umożliwia kontakt.`
-				},
-				consent: {
-					title: "Cookies",
-					text: "Używamy cookies technicznych. Analitykę włączymy tylko po Twojej zgodzie.",
-					accept: "Akceptuję",
-					reject: "Odrzuć",
-					settings: "Ustawienia",
-					save: "Zapisz",
-					analytics: "Analityka (opcjonalna)"
-				}
-			},
-			en: {
-				switchTo: "PL",
-				brand: {
-					name: "DotLinkly",
-					tagline: "Connect your dots",
-					logo: "D"
-				},
-				nav: {
-					links: [{
-							id: "leadgen",
-							label: "For who"
-						},
-						{
-							id: "how",
-							label: "How it works"
-						},
-						{
-							id: "contact",
-							label: "Contact"
-						}
-					],
-					cta: "Book a 15-min call →"
-				},
-				hero: {
-					h1: `You lose money every day,<br>because you can’t be everywhere in your business.`,
-					sub: `Tap → 1–4 questions → routing → time-stamped trail.<br>15–25 seconds and you get a signal. No activity for a month? That’s also a signal.`,
-					pills: ["No app", "15–25 seconds", "Time trail"],
-					micro: `Connect your dots. Minimum friction. Maximum signal.`,
-					cta: "Try the flow ↓"
-				},
-				leadgen: {
-					title: "What’s your role?",
-					subtitle: "Pick one option — we’ll show a tailored outcome.",
-					roles: [{
-							id: "smb",
-							label: "Owner (1–10 locations)",
-							resultTitle: "Less chaos, more signal.",
-							bullets: ["No login", "Routing", "Event history"],
-							cta: "Book a demo for 1 location"
-						},
-						{
-							id: "coo",
-							label: "COO / multi-site (10+)",
-							resultTitle: "Comparisons + silence alerts.",
-							bullets: ["Standard intake", "Silence alerts", "Evidence over promises"],
-							cta: "Book a demo for multi-site"
-						},
-						{
-							id: "fm",
-							label: "Facility / maintenance",
-							resultTitle: "Close tasks faster.",
-							bullets: ["Complete intake", "Queues / routing", "Status + time"],
-							cta: "Show routing"
-						},
-						{
-							id: "bhp",
-							label: "H&S / compliance",
-							resultTitle: "Near-miss + audit with minimal friction.",
-							bullets: ["Anonymous or with consent", "Time + place", "Export"],
-							cta: "Book H&S demo"
-						},
-						{
-							id: "other",
-							label: "Other",
-							resultTitle: "Describe in 1 sentence what you want to monitor.",
-							bullets: ["What problem?", "What scale?", "Who receives it?"],
-							cta: "Send description"
-						}
-					],
-					form: {
-						title: "Contact",
-						note: "We store nothing unless you submit the form.",
-						emailPh: "Email (required)",
-						otherPh: "Phone / LinkedIn (optional)",
-						msgPh: "1 sentence: what do you want to measure? (optional)",
-						submit: "Send",
-						sent: "Sent ✓"
-					}
-				},
-				how: {
-					title: "How it works",
-					steps: [{
-							t: "1) Tap on site",
-							d: "At the counter, restroom, door, machine."
-						},
-						{
-							t: "2) 15–25 seconds",
-							d: "No login. No app. Minimal friction."
-						},
-						{
-							t: "3) Routing",
-							d: "Goes to the right person/queue."
-						},
-						{
-							t: "4) Trail",
-							d: "Time + history instead of chat promises."
-						}
-					]
-				},
-				contact: {
-					title: "Contact",
-					sub: "Short. No spam. No sales fluff."
-				},
-				footer: {
-					links: [{
-							href: "#privacy",
-							label: "Privacy Policy"
-						},
-						{
-							href: "#cookies",
-							label: "Cookies Policy"
-						},
-						{
-							href: "#terms",
-							label: "Terms"
-						}
-					],
-					note: "© 2026 DotLinkly"
-				},
-				legal: {
-					privacyTitle: "Privacy policy (short)",
-					privacyBody: `This site is informational. You provide data only by submitting the contact form. No background collection. Server logs may contain standard technical metadata (e.g., IP) for security and maintenance.`,
-					cookiesTitle: "Cookies policy (short)",
-					cookiesBody: `We use necessary technical cookies (e.g., remember language). Analytics/marketing cookies are OFF by default and enabled only after consent.`,
-					termsTitle: "Terms (short)",
-					termsBody: `This is not an e-commerce store. The site presents the service and enables contact.`
-				},
-				consent: {
-					title: "Cookies",
-					text: "We use necessary cookies. Analytics will be enabled only with your consent.",
-					accept: "Accept",
-					reject: "Reject",
-					settings: "Settings",
-					save: "Save",
-					analytics: "Analytics (optional)"
-				}
-			}
-		};
-		const LS_LANG_KEY = "dl_lang";
-		const LS_CONSENT_KEY = "dl_consent_v1";
-		const LS_THEME_KEY = "dl_theme_ab";
-		let LANG = localStorage.getItem(LS_LANG_KEY) || "pl";
-		if (!COPY[LANG]) LANG = "pl";
-		let THEME = localStorage.getItem(LS_THEME_KEY) || "A";
-		if (!["A", "B"].includes(THEME)) THEME = "A";
-		document.body.setAttribute("data-theme", THEME);
+<script>
+const COMPANY = {
+  legalName: "RAKSO SP. Z O.O.",
+  krs: "0000846551",
+  nip: "7010987678",
+  regon: "38634714",
+  email: "dot@dotlinkly.com",
+  phone: "883 373 955"
+};
 
-		function getConsent() {
-			try {
-				const raw = localStorage.getItem(LS_CONSENT_KEY);
-				if (!raw) return {
-					necessary: true,
-					analytics: false,
-					decided: false
-				};
-				const c = JSON.parse(raw);
-				return {
-					necessary: true,
-					analytics: !!c.analytics,
-					decided: true
-				};
-			} catch {
-				return {
-					necessary: true,
-					analytics: false,
-					decided: false
-				};
-			}
-		}
+const COPY = {
+  pl: {
+    switchTo: "EN",
+    brand: { name: "DotLinkly", tagline: "Connect your dots", logo: "D" },
+    nav: {
+      links: [
+        { id: "leadgen", label: "Dla kogo" },
+        { id: "how",     label: "Jak działa" },
+        { id: "contact", label: "Kontakt" }
+      ],
+      cta: "Umów rozmowę →"
+    },
+    hero: {
+      h1: `Każdego dnia tracisz potencjalne zyski...<br><br>Zmień to! Monitorując aktywność, obecność i ułatwiając feedback...`,
+      sub: `Tap → 1–4 pytania → routing → ślad czasu.<br>15–25 sekund i masz sygnał. Brak interakcji przez miesiąc? To też sygnał.`,
+      pills: ["Bez aplikacji", "15–25 sekund", "Ślad czasu"],
+      micro: `Connect your dots. Minimum tarcia. Maksimum sygnału.`,
+      cta: "Przetestuj flow ↓"
+    },
+    leadgen: {
+      title: "Jaką rolę pełnisz?",
+      subtitle: "Kliknij jedną opcję — pokażemy dopasowany efekt.",
+      roles: [
+        {
+          id:"smb",
+          label:"Właściciel (1–10 lokalizacji)",
+          resultTitle:"Mniej chaosu, więcej sygnału.",
+          bullets:["Zgłoszenia bez logowania","Routing do osoby","Historia zdarzeń"],
+          cta:{ label:"Umów demo pod 1 lokalizację", href:"#/demo/smb", target:"_self" }
+        },
+        {
+          id:"coo",
+          label:"COO / sieć (10+)",
+          resultTitle:"Porównania + alarmy ciszy.",
+          bullets:["Standaryzacja","Alarm: brak aktywności","Dowód zamiast obietnic"],
+          cta:{ label:"Umów demo pod sieć", href:"#/demo/coo", target:"_self" }
+        },
+        {
+          id:"fm",
+          label:"Utrzymanie / facility",
+          resultTitle:"Szybsze domykanie zadań.",
+          bullets:["Kompletne zgłoszenie","Kolejki / routing","Status + czas"],
+          cta:{ label:"Pokaż routing", href:"#/demo/fm", target:"_self" }
+        },
+        {
+          id:"bhp",
+          label:"BHP / compliance",
+          resultTitle:"Near-miss i audyt z minimalnym tarciem.",
+          bullets:["Anonimowo lub po zgodzie","Czas + miejsce","Eksport"],
+          cta:{ label:"Umów demo BHP", href:"#/demo/bhp", target:"_self" }
+        },
+        {
+          id:"other",
+          label:"Inne",
+          resultTitle:"Opisz w 1 zdaniu, czego chcesz pilnować.",
+          bullets:["Jaki problem?","Jaka skala?","Kto ma dostać zgłoszenie?"],
+          cta:{ label:"Wyślij opis", href:"#/contact", target:"_self" }
+        }
+      ],
+      form: {
+        title: "Kontakt",
+        note: "Nie zapisujemy nic dopóki sam nie wyślesz formularza.",
+        emailPh: "Email (wymagane)",
+        otherPh: "Telefon / LinkedIn (opcjonalnie)",
+        msgPh: "1 zdanie: co chcesz mierzyć? (opcjonalnie)",
+        submit: "Wyślij",
+        sent: "Wysłane ✓"
+      }
+    },
+    how: {
+      title: "Jak to działa",
+      steps: [
+        { t:"1) Tap w miejscu", d:"Na ladzie, w toalecie, na drzwiach, przy maszynie." },
+        { t:"2) 15–25 sekund", d:"Bez logowania, bez aplikacji, bez tarcia." },
+        { t:"3) Routing", d:"Trafia do właściwej osoby / kolejki." },
+        { t:"4) Ślad", d:"Masz czas i historię — zamiast ustaleń na czacie." }
+      ]
+    },
+    contact: {
+      title: "Kontakt",
+      sub: "Krótko. Bez spamu. Bez sprzedażowej papki."
+    },
+    footer: {
+      links: [
+        { href:"#privacy", label:"Polityka prywatności" },
+        { href:"#cookies", label:"Polityka cookies" },
+        { href:"#terms",   label:"Regulamin" }
+      ],
+      note: "© 2026 DotLinkly"
+    },
+    legal: {
+      privacyTitle: "Polityka prywatności (skrót)",
+      privacyBody: `Strona ma charakter informacyjny. Dane podajesz wyłącznie dobrowolnie poprzez formularz kontaktowy. Nie zbieramy danych w tle. Logi serwera mogą zawierać standardowe metadane techniczne (np. IP) wymagane do bezpieczeństwa i utrzymania.`,
+      cookiesTitle: "Polityka cookies (skrót)",
+      cookiesBody: `Używamy cookies technicznych niezbędnych do działania strony (np. zapamiętanie języka). Cookies analityczne/marketingowe są domyślnie wyłączone i włączą się dopiero po Twojej zgodzie.`,
+      termsTitle: "Regulamin (skrót)",
+      termsBody: `To nie jest sklep ani e-commerce. Strona prezentuje usługę i umożliwia kontakt.`
+    },
+    consent: {
+      title: "Cookies",
+      text: "Używamy cookies technicznych. Analitykę włączymy tylko po Twojej zgodzie.",
+      accept: "Akceptuję",
+      reject: "Odrzuć",
+      settings: "Ustawienia",
+      save: "Zapisz",
+      analytics: "Analityka (opcjonalna)"
+    }
+  },
 
-		function setConsent(consent) {
-			localStorage.setItem(LS_CONSENT_KEY, JSON.stringify({
-				necessary: true,
-				analytics: !!consent.analytics
-			}));
-		}
+  en: {
+    switchTo: "PL",
+    brand: { name: "DotLinkly", tagline: "Connect your dots", logo: "D" },
+    nav: {
+      links: [
+        { id: "leadgen", label: "For who" },
+        { id: "how",     label: "How it works" },
+        { id: "contact", label: "Contact" }
+      ],
+      cta: "Book a 15-min call →"
+    },
+    hero: {
+      h1: `You lose money every day,<br>because you can’t be everywhere in your business.`,
+      sub: `Tap → 1–4 questions → routing → time-stamped trail.<br>15–25 seconds and you get a signal. No activity for a month? That’s also a signal.`,
+      pills: ["No app", "15–25 seconds", "Time trail"],
+      micro: `Connect your dots. Minimum friction. Maximum signal.`,
+      cta: "Try the flow ↓"
+    },
+    leadgen: {
+      title: "What’s your role?",
+      subtitle: "Pick one option — we’ll show a tailored outcome.",
+      roles: [
+        {
+          id:"smb",
+          label:"Owner (1–10 locations)",
+          resultTitle:"Less chaos, more signal.",
+          bullets:["No login","Routing","Event history"],
+          cta:{ label:"Book demo for 1 location", href:"#/demo/smb", target:"_self" }
+        },
+        {
+          id:"coo",
+          label:"COO / multi-site (10+)",
+          resultTitle:"Comparisons + silence alerts.",
+          bullets:["Standard intake","Silence alerts","Evidence over promises"],
+          cta:{ label:"Book demo for multi-site", href:"#/demo/coo", target:"_self" }
+        },
+        {
+          id:"fm",
+          label:"Facility / maintenance",
+          resultTitle:"Close tasks faster.",
+          bullets:["Complete intake","Queues / routing","Status + time"],
+          cta:{ label:"Show routing", href:"#/demo/fm", target:"_self" }
+        },
+        {
+          id:"bhp",
+          label:"H&S / compliance",
+          resultTitle:"Near-miss + audit with minimal friction.",
+          bullets:["Anonymous or with consent","Time + place","Export"],
+          cta:{ label:"Book H&S demo", href:"#/demo/bhp", target:"_self" }
+        },
+        {
+          id:"other",
+          label:"Other",
+          resultTitle:"Describe in 1 sentence what you want to monitor.",
+          bullets:["What problem?","What scale?","Who receives it?"],
+          cta:{ label:"Send description", href:"#/contact", target:"_self" }
+        }
+      ],
+      form: {
+        title: "Contact",
+        note: "We store nothing unless you submit the form.",
+        emailPh: "Email (required)",
+        otherPh: "Phone / LinkedIn (optional)",
+        msgPh: "1 sentence: what do you want to measure? (optional)",
+        submit: "Send",
+        sent: "Sent ✓"
+      }
+    },
+    how: {
+      title: "How it works",
+      steps: [
+        { t:"1) Tap on site", d:"At the counter, restroom, door, machine." },
+        { t:"2) 15–25 seconds", d:"No login. No app. Minimal friction." },
+        { t:"3) Routing", d:"Goes to the right person/queue." },
+        { t:"4) Trail", d:"Time + history instead of chat promises." }
+      ]
+    },
+    contact: {
+      title: "Contact",
+      sub: "Short. No spam. No sales fluff."
+    },
+    footer: {
+      links: [
+        { href:"#privacy", label:"Privacy Policy" },
+        { href:"#cookies", label:"Cookies Policy" },
+        { href:"#terms",   label:"Terms" }
+      ],
+      note: "© 2026 DotLinkly"
+    },
+    legal: {
+      privacyTitle: "Privacy policy (short)",
+      privacyBody: `This site is informational. You provide data only by submitting the contact form. No background collection. Server logs may contain standard technical metadata (e.g., IP) for security and maintenance.`,
+      cookiesTitle: "Cookies policy (short)",
+      cookiesBody: `We use necessary technical cookies (e.g., remember language). Analytics/marketing cookies are OFF by default and enabled only after consent.`,
+      termsTitle: "Terms (short)",
+      termsBody: `This is not an e-commerce store. The site presents the service and enables contact.`
+    },
+    consent: {
+      title: "Cookies",
+      text: "We use necessary cookies. Analytics will be enabled only with your consent.",
+      accept: "Accept",
+      reject: "Reject",
+      settings: "Settings",
+      save: "Save",
+      analytics: "Analytics (optional)"
+    }
+  }
+};
 
-		function el(tag, cls = "", html = null) {
-			const n = document.createElement(tag);
-			if (cls) n.className = cls;
-			if (html !== null) n.innerHTML = html;
-			return n;
-		}
+const LS_LANG_KEY = "dl_lang";
+const LS_CONSENT_KEY = "dl_consent_v1";
+const LS_THEME_KEY = "dl_theme_ab";
 
-		function scrollToId(id) {
-			document.querySelector("#" + id)?.scrollIntoView({
-				behavior: "smooth",
-				block: "start"
-			});
-		}
-		/* OPTIONAL scripts blocked until consent */
-		function maybeLoadOptionalScripts() {
-			const consent = getConsent();
-			if (!consent.analytics) return;
-			if (window.__dl_overlay_loaded) return;
-			window.__dl_overlay_loaded = true;
-			// PLACEHOLDER – tu wstawisz realny skrypt overlay po zgodzie
-			// const s = document.createElement("script");
-			// s.src = "https://app.dotlinkly.com/overlay.js";
-			// s.async = true;
-			// document.head.appendChild(s);
-			console.log("[DotLinkly] optional scripts enabled (placeholder)");
-		}
+let LANG = localStorage.getItem(LS_LANG_KEY) || "pl";
+if (!COPY[LANG]) LANG = "pl";
 
-		function render() {
-			const C = COPY[LANG];
-			localStorage.setItem(LS_LANG_KEY, LANG);
-			localStorage.setItem(LS_THEME_KEY, THEME);
-			document.body.setAttribute("data-theme", THEME);
-			const app = document.getElementById("app");
-			app.innerHTML = "";
-			/* Header */
-			const header = el("header", "sticky top-0 z-50");
-			const hbar = el("div", "mx-auto max-w-6xl px-6 py-3");
-			const hcard = el("div", "glass rounded-2xl px-4 py-3 flex items-center justify-between gap-3");
-			const left = el("div", "flex items-center gap-3");
-			left.append(
-				el("div", "h-10 w-10 rounded-2xl grid place-items-center font-black text-xl",
-					`<span class="text-grad">${C.brand.logo}</span>`
-				),
-				el("div", "leading-tight",
-					`<div class="font-black text-lg">${C.brand.name}</div>
+let THEME = localStorage.getItem(LS_THEME_KEY) || "A";
+if (!["A","B","C"].includes(THEME)) THEME = "A";
+document.body.setAttribute("data-theme", THEME);
+
+function getConsent(){
+  try {
+    const raw = localStorage.getItem(LS_CONSENT_KEY);
+    if (!raw) return { necessary: true, analytics: false, decided: false };
+    const c = JSON.parse(raw);
+    return { necessary: true, analytics: !!c.analytics, decided: true };
+  } catch {
+    return { necessary: true, analytics: false, decided: false };
+  }
+}
+function setConsent(consent){
+  localStorage.setItem(LS_CONSENT_KEY, JSON.stringify({ necessary:true, analytics: !!consent.analytics }));
+}
+function el(tag, cls="", html=null){
+  const n = document.createElement(tag);
+  if (cls) n.className = cls;
+  if (html !== null) n.innerHTML = html;
+  return n;
+}
+function scrollToId(id){
+  document.querySelector("#"+id)?.scrollIntoView({behavior:"smooth", block:"start"});
+}
+
+/* OPTIONAL scripts blocked until consent */
+function maybeLoadOptionalScripts(){
+  const consent = getConsent();
+  if (!consent.analytics) return;
+  if (window.__dl_overlay_loaded) return;
+  window.__dl_overlay_loaded = true;
+  console.log("[DotLinkly] optional scripts enabled (placeholder)");
+}
+
+function render(){
+  const C = COPY[LANG];
+  localStorage.setItem(LS_LANG_KEY, LANG);
+  localStorage.setItem(LS_THEME_KEY, THEME);
+  document.body.setAttribute("data-theme", THEME);
+
+  const app = document.getElementById("app");
+  app.innerHTML = "";
+
+  /* Header */
+  const header = el("header","sticky top-0 z-50");
+  const hbar = el("div","mx-auto max-w-6xl px-6 py-3");
+  const hcard = el("div","glass rounded-2xl px-4 py-3 flex items-center justify-between gap-3");
+  const left = el("div","flex items-center gap-3");
+  left.append(
+    el("div","h-10 w-10 rounded-2xl grid place-items-center font-black text-xl",
+      `<span class="text-grad">${C.brand.logo}</span>`
+    ),
+    el("div","leading-tight",
+      `<div class="font-black text-lg">${C.brand.name}</div>
        <div class="text-xs font-semibold" style="color:var(--muted)">${C.brand.tagline}</div>`
-				)
-			);
-			const nav = el("div", "hidden md:flex items-center gap-5 text-sm font-semibold", "");
-			C.nav.links.forEach(l => {
-				const a = el("a", "hover:opacity-90", l.label);
-				a.style.color = "var(--muted)";
-				a.href = "#" + l.id;
-				a.addEventListener("click", (e) => {
-					e.preventDefault();
-					scrollToId(l.id);
-				});
-				nav.append(a);
-			});
-			const right = el("div", "flex items-center gap-2 flex-wrap justify-end");
-			const ab = el("button", "btn-ghost px-3 py-2 rounded-xl text-sm font-semibold", `Theme ${THEME}`);
-			ab.addEventListener("click", () => {
-				THEME = (THEME === "A") ? "B" : "A";
-				render();
-			});
-			const langBtn = el("button", "btn-ghost px-3 py-2 rounded-xl text-sm font-semibold", C.switchTo);
-			langBtn.addEventListener("click", () => {
-				LANG = (LANG === "pl") ? "en" : "pl";
-				render();
-			});
-			const cta = el("a", "btn-primary px-4 py-2.5 rounded-xl text-sm font-semibold shadow-sm transition", C.nav.cta);
-			cta.href = "#contact";
-			cta.addEventListener("click", (e) => {
-				e.preventDefault();
-				scrollToId("contact");
-			});
-			right.append(ab, langBtn, cta);
-			hcard.append(left, nav, right);
-			hbar.append(hcard);
-			header.append(hbar);
-			/* Hero */
-			const hero = el("section", "pt-12 pb-12");
-			const hw = el("div", "max-w-6xl mx-auto px-6 text-center");
-			const heroCard = el("div", "glass rounded-3xl p-8 sm:p-10");
-			heroCard.append(
-				el("h1", "text-5xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-[1.05]", `<span class="text-grad">${C.hero.h1}</span>`),
-				el("p", "mt-6 text-xl sm:text-2xl max-w-3xl mx-auto leading-relaxed", `<span style="color:var(--muted)">${C.hero.sub}</span>`)
-			);
-			const pills = el("div", "mt-8 flex flex-wrap justify-center gap-3");
-			C.hero.pills.forEach(p => {
-				pills.append(el("span", "chip px-5 py-2.5 rounded-full text-base font-semibold", p));
-			});
-			heroCard.append(pills);
-			heroCard.append(el("p", "mt-8 text-lg font-semibold italic max-w-3xl mx-auto", `<span style="color:var(--fg)">${C.hero.micro}</span>`));
-			const heroCta = el("a", "btn-primary mt-8 inline-flex px-8 py-4 text-white font-semibold text-lg rounded-2xl transition", C.hero.cta);
-			heroCta.href = "#leadgen";
-			heroCta.addEventListener("click", (e) => {
-				e.preventDefault();
-				scrollToId("leadgen");
-			});
-			heroCard.append(heroCta);
-			hw.append(heroCard);
-			hero.append(hw);
-			/* Leadgen */
-			const lead = el("section", "py-14");
-			lead.id = "leadgen";
-			const lw = el("div", "max-w-6xl mx-auto px-6");
-			lw.append(
-				el("h2", "text-3xl sm:text-4xl font-black tracking-tight text-center", `<span class="text-grad">${C.leadgen.title}</span>`),
-				el("p", "mt-3 text-lg text-center max-w-2xl mx-auto", `<span style="color:var(--muted)">${C.leadgen.subtitle}</span>`)
-			);
-			const grid = el("div", "mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3");
-			const result = el("div", "mt-8 max-w-3xl mx-auto hidden");
-			const resultCard = el("div", "glass2 rounded-2xl p-6 fade");
-			const rTitle = el("div", "text-xl sm:text-2xl font-black");
-			const rList = el("ul", "mt-4 grid gap-2");
-			const rCta = el("div", "mt-5 text-sm font-semibold");
-			rTitle.style.color = "var(--fg)";
-			rCta.style.color = "var(--muted)";
-			resultCard.append(rTitle, rList, rCta);
-			result.append(resultCard);
-			const formWrap = el("div", "mt-10 max-w-xl mx-auto glass rounded-2xl p-6");
-			formWrap.append(
-				el("div", "text-center font-black text-lg", C.leadgen.form.title),
-				el("p", "mt-1 text-sm text-center", `<span style="color:var(--muted)">${C.leadgen.form.note}</span>`)
-			);
-			const form = el("form", "mt-4 grid gap-3");
-			const roleHidden = document.createElement("input");
-			roleHidden.type = "hidden";
-			roleHidden.name = "role";
-			const email = document.createElement("input");
-			email.type = "email";
-			email.required = true;
-			email.name = "email";
-			email.className = "w-full px-4 py-3 rounded-xl ring-soft bg-white/5 border border-white/10 text-white placeholder:text-white/50";
-			email.placeholder = C.leadgen.form.emailPh;
-			const other = document.createElement("input");
-			other.type = "text";
-			other.name = "contact";
-			other.className = "w-full px-4 py-3 rounded-xl ring-soft bg-white/5 border border-white/10 text-white placeholder:text-white/50";
-			other.placeholder = C.leadgen.form.otherPh;
-			const msg = document.createElement("textarea");
-			msg.name = "message";
-			msg.rows = 3;
-			msg.className = "w-full px-4 py-3 rounded-xl ring-soft bg-white/5 border border-white/10 text-white placeholder:text-white/50";
-			msg.placeholder = C.leadgen.form.msgPh;
-			const submit = el("button", "btn-primary px-6 py-3 rounded-xl font-semibold transition", C.leadgen.form.submit);
-			submit.type = "submit";
-			form.append(roleHidden, email, other, msg, submit);
-			form.addEventListener("submit", (e) => {
-				e.preventDefault();
-				submit.textContent = C.leadgen.form.sent;
-				submit.disabled = true;
-			});
-			formWrap.append(form);
+    )
+  );
 
-			function setRole(role) {
-				roleHidden.value = role.id;
-				rTitle.textContent = role.resultTitle;
-				rList.innerHTML = "";
-				role.bullets.forEach(b => {
-					const li = el("li", "flex gap-2");
-					li.append(
-						el("span", "mt-2 h-2 w-2 rounded-full shrink-0", ""),
-						el("span", "", b)
-					);
-					li.firstChild.style.background = "linear-gradient(90deg, var(--accent1), var(--accent2))";
-					li.lastChild.style.color = "var(--muted)";
-					rList.append(li);
-				});
-				rCta.textContent = role.cta;
-				result.classList.remove("hidden");
-				resultCard.classList.remove("fade");
-				void resultCard.offsetWidth;
-				resultCard.classList.add("fade");
-				setTimeout(() => result.scrollIntoView({
-					behavior: "smooth",
-					block: "start"
-				}), 40);
-			}
-			C.leadgen.roles.forEach(role => {
-				const b = el("button", "glass2 rounded-2xl p-5 text-left transition");
-				b.type = "button";
-				b.innerHTML = `
-      <div class="font-semibold text-white">${role.label}</div>
-      <div class="mt-1 text-sm" style="color:var(--muted)">Wybierz →</div>
+  const nav = el("div","hidden md:flex items-center gap-5 text-sm font-semibold", "");
+  C.nav.links.forEach(l=>{
+    const a = el("a","hover:opacity-90", l.label);
+    a.style.color = "var(--muted)";
+    a.href = "#"+l.id;
+    a.addEventListener("click",(e)=>{e.preventDefault(); scrollToId(l.id);});
+    nav.append(a);
+  });
+
+  const right = el("div","flex items-center gap-2 flex-wrap justify-end");
+
+  const ab = el("button","btn-ghost px-3 py-2 rounded-xl text-sm font-semibold", `Theme ${THEME}`);
+  ab.addEventListener("click", ()=>{
+    THEME = (THEME === "A") ? "B" : (THEME === "B") ? "C" : "A";
+    render();
+  });
+
+  const langBtn = el("button","btn-ghost px-3 py-2 rounded-xl text-sm font-semibold", C.switchTo);
+  langBtn.addEventListener("click", ()=>{
+    LANG = (LANG === "pl") ? "en" : "pl";
+    render();
+  });
+
+  const cta = el("a","btn-primary px-4 py-2.5 rounded-xl text-sm font-semibold shadow-sm transition", C.nav.cta);
+  cta.href = "#contact";
+  cta.addEventListener("click",(e)=>{e.preventDefault(); scrollToId("contact");});
+
+  right.append(ab, langBtn, cta);
+  hcard.append(left, nav, right);
+  hbar.append(hcard);
+  header.append(hbar);
+
+  /* Hero */
+  const hero = el("section","pt-12 pb-12");
+  const hw = el("div","max-w-6xl mx-auto px-6 text-center");
+  const heroCard = el("div","glass rounded-3xl p-8 sm:p-10");
+  heroCard.append(
+    el("h1","text-5xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-[1.05]", `<span class="text-grad">${C.hero.h1}</span>`),
+    el("p","mt-6 text-xl sm:text-2xl max-w-3xl mx-auto leading-relaxed", `<span style="color:var(--muted)">${C.hero.sub}</span>`)
+  );
+
+  const pills = el("div","mt-8 flex flex-wrap justify-center gap-3");
+  C.hero.pills.forEach(p=>{
+    pills.append(el("span","chip px-5 py-2.5 rounded-full text-base font-semibold", p));
+  });
+  heroCard.append(pills);
+
+  heroCard.append(el("p","mt-8 text-lg font-semibold italic max-w-3xl mx-auto", `<span style="color:var(--fg)">${C.hero.micro}</span>`));
+
+  const heroCta = el("a","btn-primary mt-8 inline-flex px-8 py-4 font-semibold text-lg rounded-2xl transition", C.hero.cta);
+  heroCta.href="#leadgen";
+  heroCta.addEventListener("click",(e)=>{e.preventDefault(); scrollToId("leadgen");});
+  heroCard.append(heroCta);
+
+  hw.append(heroCard);
+  hero.append(hw);
+
+  /* Leadgen */
+  const lead = el("section","py-14");
+  lead.id="leadgen";
+  const lw = el("div","max-w-6xl mx-auto px-6");
+  lw.append(
+    el("h2","text-3xl sm:text-4xl font-black tracking-tight text-center", `<span class="text-grad">${C.leadgen.title}</span>`),
+    el("p","mt-3 text-lg text-center max-w-2xl mx-auto", `<span style="color:var(--muted)">${C.leadgen.subtitle}</span>`)
+  );
+
+  const grid = el("div","mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3");
+  const result = el("div","mt-8 max-w-3xl mx-auto hidden");
+  const resultCard = el("div","glass2 rounded-2xl p-6 fade");
+  const rTitle = el("div","text-xl sm:text-2xl font-black");
+  const rList = el("ul","mt-4 grid gap-2");
+  const rCta = el("div","mt-5");
+  rTitle.style.color = "var(--fg)";
+  resultCard.append(rTitle, rList, rCta);
+  result.append(resultCard);
+
+  const formWrap = el("div","mt-10 max-w-xl mx-auto glass rounded-2xl p-6");
+  formWrap.append(
+    el("div","text-center font-black text-lg", C.leadgen.form.title),
+    el("p","mt-1 text-sm text-center", `<span style="color:var(--muted)">${C.leadgen.form.note}</span>`)
+  );
+
+  const form = el("form","mt-4 grid gap-3");
+  const roleHidden = document.createElement("input"); roleHidden.type="hidden"; roleHidden.name="role";
+
+  const email = document.createElement("input");
+  email.type="email"; email.required=true; email.name="email";
+  email.className="w-full px-4 py-3 rounded-xl ring-soft bg-white/5 border border-white/10 placeholder:text-white/50";
+  email.placeholder=C.leadgen.form.emailPh;
+
+  const other = document.createElement("input");
+  other.type="text"; other.name="contact";
+  other.className="w-full px-4 py-3 rounded-xl ring-soft bg-white/5 border border-white/10 placeholder:text-white/50";
+  other.placeholder=C.leadgen.form.otherPh;
+
+  const msg = document.createElement("textarea");
+  msg.name="message"; msg.rows=3;
+  msg.className="w-full px-4 py-3 rounded-xl ring-soft bg-white/5 border border-white/10 placeholder:text-white/50";
+  msg.placeholder=C.leadgen.form.msgPh;
+
+  // keep input text readable in all themes
+  [email, other, msg].forEach(x => { x.style.color = "var(--fg)"; });
+
+  const submit = el("button","btn-primary px-6 py-3 rounded-xl font-semibold transition", C.leadgen.form.submit);
+  submit.type="submit";
+
+  form.append(roleHidden, email, other, msg, submit);
+
+  form.addEventListener("submit",(e)=>{
+    e.preventDefault();
+    submit.textContent = C.leadgen.form.sent;
+    submit.disabled = true;
+  });
+
+  formWrap.append(form);
+
+  function setRole(role){
+    roleHidden.value = role.id;
+    rTitle.textContent = role.resultTitle;
+    rList.innerHTML = "";
+
+    role.bullets.forEach(b=>{
+      const li = el("li","flex gap-2");
+      li.append(
+        el("span","mt-2 h-2 w-2 rounded-full shrink-0",""),
+        el("span","", b)
+      );
+      li.firstChild.style.background = "linear-gradient(90deg, var(--accent1), var(--accent2))";
+      li.lastChild.style.color = "var(--muted)";
+      rList.append(li);
+    });
+
+    // CTA: obsłuż obiekt (i ewentualnie string, gdybyś gdzieś zostawił)
+    const ctaLabel = (typeof role.cta === "string") ? role.cta : (role.cta?.label ?? "Kontakt");
+    const ctaHref  = (typeof role.cta === "string") ? "#contact" : (role.cta?.href ?? "#contact");
+    const ctaTarget = (typeof role.cta === "string") ? "_self" : (role.cta?.target ?? "_self");
+
+    rCta.innerHTML = `
+      <a href="${ctaHref}" target="${ctaTarget}" class="btn-primary inline-flex px-6 py-3 rounded-xl font-semibold transition">
+        ${ctaLabel} →
+      </a>
     `;
-				b.addEventListener("click", () => setRole(role));
-				b.addEventListener("mouseenter", () => b.style.transform = "translateY(-1px)");
-				b.addEventListener("mouseleave", () => b.style.transform = "translateY(0)");
-				grid.append(b);
-			});
-			lw.append(grid, result, formWrap);
-			lead.append(lw);
-			/* How */
-			const how = el("section", "py-14");
-			how.id = "how";
-			const howw = el("div", "max-w-6xl mx-auto px-6");
-			howw.append(el("h2", "text-3xl sm:text-4xl font-black tracking-tight text-center", `<span class="text-grad">${C.how.title}</span>`));
-			const steps = el("div", "mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4");
-			C.how.steps.forEach(s => {
-				const card = el("div", "glass2 rounded-2xl p-5");
-				card.append(
-					el("div", "font-black text-white", s.t),
-					el("div", "mt-2", `<span style="color:var(--muted)">${s.d}</span>`)
-				);
-				steps.append(card);
-			});
-			howw.append(steps);
-			how.append(howw);
-			/* Contact */
-			const contact = el("section", "py-14");
-			contact.id = "contact";
-			const cw = el("div", "max-w-6xl mx-auto px-6");
-			const contactCard = el("div", "glass rounded-3xl p-8 text-center");
-			contactCard.append(
-				el("h2", "text-3xl sm:text-4xl font-black tracking-tight", `<span class="text-grad">${C.contact.title}</span>`),
-				el("p", "mt-3 text-lg max-w-2xl mx-auto", `<span style="color:var(--muted)">${C.contact.sub}</span>`),
-				el("div", "mt-6 text-lg font-semibold", `
+
+    result.classList.remove("hidden");
+    resultCard.classList.remove("fade"); void resultCard.offsetWidth; resultCard.classList.add("fade");
+    setTimeout(()=> result.scrollIntoView({behavior:"smooth", block:"start"}), 40);
+  }
+
+  C.leadgen.roles.forEach(role=>{
+    const b = el("button","glass2 rounded-2xl p-5 text-left transition");
+    b.type="button";
+    b.innerHTML = `
+      <div class="font-semibold">${role.label}</div>
+      <div class="mt-1 text-sm" style="color:var(--muted)">${LANG === "pl" ? "Wybierz →" : "Pick →"}</div>
+    `;
+    b.addEventListener("click",()=>setRole(role));
+    b.addEventListener("mouseenter",()=> b.style.transform="translateY(-1px)");
+    b.addEventListener("mouseleave",()=> b.style.transform="translateY(0)");
+    grid.append(b);
+  });
+
+  lw.append(grid, result, formWrap);
+  lead.append(lw);
+
+  /* How */
+  const how = el("section","py-14");
+  how.id="how";
+  const howw = el("div","max-w-6xl mx-auto px-6");
+  howw.append(el("h2","text-3xl sm:text-4xl font-black tracking-tight text-center", `<span class="text-grad">${C.how.title}</span>`));
+
+  const steps = el("div","mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4");
+  C.how.steps.forEach(s=>{
+    const card = el("div","glass2 rounded-2xl p-5");
+    card.append(
+      el("div","font-black", s.t),
+      el("div","mt-2", `<span style="color:var(--muted)">${s.d}</span>`)
+    );
+    steps.append(card);
+  });
+  howw.append(steps);
+  how.append(howw);
+
+  /* Contact */
+  const contact = el("section","py-14");
+  contact.id="contact";
+  const cw = el("div","max-w-6xl mx-auto px-6");
+  const contactCard = el("div","glass rounded-3xl p-8 text-center");
+  contactCard.append(
+    el("h2","text-3xl sm:text-4xl font-black tracking-tight", `<span class="text-grad">${C.contact.title}</span>`),
+    el("p","mt-3 text-lg max-w-2xl mx-auto", `<span style="color:var(--muted)">${C.contact.sub}</span>`),
+    el("div","mt-6 text-lg font-semibold", `
       <div>${COMPANY.email}</div>
       <div class="mt-1">tel. ${COMPANY.phone}</div>
     `)
-			);
-			cw.append(contactCard);
-			contact.append(cw);
-			/* Footer + legal */
-			const footer = el("footer", "py-10");
-			const fw = el("div", "max-w-6xl mx-auto px-6");
-			const links = el("div", "flex flex-wrap gap-4 text-sm font-semibold");
-			C.footer.links.forEach(l => {
-				const a = el("a", "hover:opacity-90 underline underline-offset-4", l.label);
-				a.style.color = "var(--muted)";
-				a.href = l.href;
-				links.append(a);
-			});
-			const companyDetails = el("details", "mt-6 max-w-xl");
-			companyDetails.innerHTML = `
-    <summary class="cursor-pointer text-sm font-semibold hover:opacity-90" style="color:var(--muted)">Dane firmy</summary>
+  );
+  cw.append(contactCard);
+  contact.append(cw);
+
+  /* Footer + legal */
+  const footer = el("footer","py-10");
+  const fw = el("div","max-w-6xl mx-auto px-6");
+  const links = el("div","flex flex-wrap gap-4 text-sm font-semibold");
+  C.footer.links.forEach(l=>{
+    const a = el("a","hover:opacity-90 underline underline-offset-4", l.label);
+    a.style.color = "var(--muted)";
+    a.href = l.href;
+    links.append(a);
+  });
+
+  const companyDetails = el("details","mt-6 max-w-xl");
+  companyDetails.innerHTML = `
+    <summary class="cursor-pointer text-sm font-semibold hover:opacity-90" style="color:var(--muted)">${LANG === "pl" ? "Dane firmy" : "Company details"}</summary>
     <div class="mt-3 glass2 rounded-2xl p-4">
-      <div class="font-semibold text-white">${COMPANY.legalName}</div>
+      <div class="font-semibold">${COMPANY.legalName}</div>
       <div class="mt-1" style="color:var(--muted)">KRS: ${COMPANY.krs}</div>
       <div style="color:var(--muted)">NIP: ${COMPANY.nip}</div>
       <div style="color:var(--muted)">REGON: ${COMPANY.regon}</div>
     </div>
   `;
-			fw.append(links, companyDetails, el("div", "mt-4 text-xs", `<span style="color:var(--muted)">${C.footer.note}</span>`));
-			footer.append(fw);
-			const legalWrap = el("section", "py-10");
-			const lw2 = el("div", "max-w-6xl mx-auto px-6 grid gap-6");
-			lw2.append(
-				el("div", "glass rounded-2xl p-6", `
-      <div id="privacy" class="text-xl font-black text-white">${C.legal.privacyTitle}</div>
+
+  fw.append(links, companyDetails, el("div","mt-4 text-xs", `<span style="color:var(--muted)">${C.footer.note}</span>`));
+  footer.append(fw);
+
+  const legalWrap = el("section","py-10");
+  const lw2 = el("div","max-w-6xl mx-auto px-6 grid gap-6");
+  lw2.append(
+    el("div","glass rounded-2xl p-6", `
+      <div id="privacy" class="text-xl font-black">${C.legal.privacyTitle}</div>
       <div class="mt-3 leading-relaxed" style="color:var(--muted)">${C.legal.privacyBody}</div>
     `),
-				el("div", "glass rounded-2xl p-6", `
-      <div id="cookies" class="text-xl font-black text-white">${C.legal.cookiesTitle}</div>
+    el("div","glass rounded-2xl p-6", `
+      <div id="cookies" class="text-xl font-black">${C.legal.cookiesTitle}</div>
       <div class="mt-3 leading-relaxed" style="color:var(--muted)">${C.legal.cookiesBody}</div>
     `),
-				el("div", "glass rounded-2xl p-6", `
-      <div id="terms" class="text-xl font-black text-white">${C.legal.termsTitle}</div>
+    el("div","glass rounded-2xl p-6", `
+      <div id="terms" class="text-xl font-black">${C.legal.termsTitle}</div>
       <div class="mt-3 leading-relaxed" style="color:var(--muted)">${C.legal.termsBody}</div>
     `)
-			);
-			legalWrap.append(lw2);
-			app.append(header, hero, lead, how, contact, footer, legalWrap);
-			renderCookieUI();
-			maybeLoadOptionalScripts();
-		}
-		/* Cookie bar (minimal) */
-		function renderCookieUI() {
-			const C = COPY[LANG];
-			const consent = getConsent();
-			document.getElementById("dl-cookie")?.remove();
-			document.getElementById("dl-cookie-modal")?.remove();
-			if (consent.decided) return;
-			const bar = el("div", "fixed bottom-4 left-0 right-0 z-[60]");
-			bar.id = "dl-cookie";
-			const box = el("div", "max-w-6xl mx-auto px-6");
-			const card = el("div", "glass rounded-2xl p-4 sm:p-5 flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between");
-			const txt = el("div", "text-sm",
-				`<div class="font-black text-white">${C.consent.title}</div>
-     <div class="mt-1" style="color:var(--muted)">${C.consent.text}</div>`
-			);
-			const btns = el("div", "flex gap-2 flex-wrap");
-			const accept = el("button", "btn-primary px-4 py-2 rounded-xl text-white font-semibold text-sm transition", C.consent.accept);
-			const reject = el("button", "btn-ghost px-4 py-2 rounded-xl font-semibold text-sm transition", C.consent.reject);
-			const settings = el("button", "btn-ghost px-4 py-2 rounded-xl font-semibold text-sm transition", C.consent.settings);
-			accept.addEventListener("click", () => {
-				setConsent({
-					analytics: true
-				});
-				document.getElementById("dl-cookie")?.remove();
-				maybeLoadOptionalScripts();
-			});
-			reject.addEventListener("click", () => {
-				setConsent({
-					analytics: false
-				});
-				document.getElementById("dl-cookie")?.remove();
-			});
-			settings.addEventListener("click", () => openCookieModal());
-			btns.append(settings, reject, accept);
-			card.append(txt, btns);
-			box.append(card);
-			bar.append(box);
-			document.body.append(bar);
+  );
+  legalWrap.append(lw2);
 
-			function openCookieModal() {
-				const modal = el("div", "fixed inset-0 z-[70] bg-black/40 backdrop-blur-sm flex items-center justify-center p-6");
-				modal.id = "dl-cookie-modal";
-				const mcard = el("div", "w-full max-w-lg glass rounded-2xl p-6");
-				mcard.append(
-					el("div", "text-xl font-black text-white", C.consent.settings),
-					el("p", "mt-2 text-sm", `<span style="color:var(--muted)">${C.consent.text}</span>`)
-				);
-				const row = el("label", "mt-4 flex items-center justify-between gap-4 p-4 rounded-2xl border border-white/10 bg-white/5 cursor-pointer");
-				row.innerHTML = `
+  app.append(header, hero, lead, how, contact, footer, legalWrap);
+
+  renderCookieUI();
+  maybeLoadOptionalScripts();
+}
+
+/* Cookie bar (minimal) */
+function renderCookieUI(){
+  const C = COPY[LANG];
+  const consent = getConsent();
+  document.getElementById("dl-cookie")?.remove();
+  document.getElementById("dl-cookie-modal")?.remove();
+  if (consent.decided) return;
+
+  const bar = el("div","fixed bottom-4 left-0 right-0 z-[60]");
+  bar.id = "dl-cookie";
+  const box = el("div","max-w-6xl mx-auto px-6");
+  const card = el("div","glass rounded-2xl p-4 sm:p-5 flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between");
+
+  const txt = el("div","text-sm",
+    `<div class="font-black">${C.consent.title}</div>
+     <div class="mt-1" style="color:var(--muted)">${C.consent.text}</div>`
+  );
+
+  const btns = el("div","flex gap-2 flex-wrap");
+  const accept = el("button","btn-primary px-4 py-2 rounded-xl font-semibold text-sm transition", C.consent.accept);
+  const reject = el("button","btn-ghost px-4 py-2 rounded-xl font-semibold text-sm transition", C.consent.reject);
+  const settings = el("button","btn-ghost px-4 py-2 rounded-xl font-semibold text-sm transition", C.consent.settings);
+
+  accept.addEventListener("click",()=>{
+    setConsent({ analytics:true });
+    document.getElementById("dl-cookie")?.remove();
+    maybeLoadOptionalScripts();
+  });
+  reject.addEventListener("click",()=>{
+    setConsent({ analytics:false });
+    document.getElementById("dl-cookie")?.remove();
+  });
+  settings.addEventListener("click",()=> openCookieModal());
+
+  btns.append(settings, reject, accept);
+  card.append(txt, btns);
+  box.append(card);
+  bar.append(box);
+  document.body.append(bar);
+
+  function openCookieModal(){
+    const modal = el("div","fixed inset-0 z-[70] bg-black/40 backdrop-blur-sm flex items-center justify-center p-6");
+    modal.id="dl-cookie-modal";
+    const mcard = el("div","w-full max-w-lg glass rounded-2xl p-6");
+    mcard.append(
+      el("div","text-xl font-black", C.consent.settings),
+      el("p","mt-2 text-sm", `<span style="color:var(--muted)">${C.consent.text}</span>`)
+    );
+
+    const row = el("label","mt-4 flex items-center justify-between gap-4 p-4 rounded-2xl border border-white/10 bg-white/5 cursor-pointer");
+    row.innerHTML = `
       <div>
-        <div class="font-semibold text-white">${C.consent.analytics}</div>
-        <div class="text-xs" style="color:var(--muted)">OFF domyślnie. Włączysz tylko jeśli chcesz.</div>
+        <div class="font-semibold">${C.consent.analytics}</div>
+        <div class="text-xs" style="color:var(--muted)">OFF by default. Enable only if you want.</div>
       </div>
     `;
-				const toggle = document.createElement("input");
-				toggle.type = "checkbox";
-				toggle.checked = false;
-				toggle.className = "h-5 w-5";
-				row.append(toggle);
-				const actions = el("div", "mt-5 flex gap-2 justify-end");
-				const close = el("button", "btn-ghost px-4 py-2 rounded-xl font-semibold text-sm transition", "OK");
-				const save = el("button", "btn-primary px-4 py-2 rounded-xl text-white font-semibold text-sm transition", C.consent.save);
-				close.addEventListener("click", () => modal.remove());
-				save.addEventListener("click", () => {
-					setConsent({
-						analytics: toggle.checked
-					});
-					document.getElementById("dl-cookie")?.remove();
-					modal.remove();
-					if (toggle.checked) maybeLoadOptionalScripts();
-				});
-				actions.append(close, save);
-				mcard.append(row, actions);
-				modal.append(mcard);
-				modal.addEventListener("click", (e) => {
-					if (e.target === modal) modal.remove();
-				});
-				document.body.append(modal);
-			}
-		}
-		render();
-	</script>
-</body>
+    const toggle = document.createElement("input");
+    toggle.type="checkbox";
+    toggle.checked = false;
+    toggle.className="h-5 w-5";
+    row.append(toggle);
 
+    const actions = el("div","mt-5 flex gap-2 justify-end");
+    const close = el("button","btn-ghost px-4 py-2 rounded-xl font-semibold text-sm transition","OK");
+    const save = el("button","btn-primary px-4 py-2 rounded-xl font-semibold text-sm transition", C.consent.save);
+
+    close.addEventListener("click",()=> modal.remove());
+    save.addEventListener("click",()=>{
+      setConsent({ analytics: toggle.checked });
+      document.getElementById("dl-cookie")?.remove();
+      modal.remove();
+      if (toggle.checked) maybeLoadOptionalScripts();
+    });
+
+    actions.append(close, save);
+    mcard.append(row, actions);
+    modal.append(mcard);
+    modal.addEventListener("click",(e)=>{ if(e.target === modal) modal.remove(); });
+    document.body.append(modal);
+  }
+}
+
+render();
+</script>
+</body>
 </html>
     
   </body>
