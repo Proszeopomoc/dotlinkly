@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://proszeopomoc.github.io/dotlinkly/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Sekcje jako “podstrony” (hash nie zawsze bywa indeksowany, ale nie szkodzi) -->
+  <url>
+    <loc>https://proszeopomoc.github.io/dotlinkly/#leadgen</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://proszeopomoc.github.io/dotlinkly/#how</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://proszeopomoc.github.io/dotlinkly/#contact</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- “podstrony” legal (tak masz w linkach stopki) -->
+  <url>
+    <loc>https://proszeopomoc.github.io/dotlinkly/#privacy</loc>
+    <lastmod>2026-01,29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://proszeopomoc.github.io/dotlinkly/#cookies</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://proszeopomoc.github.io/dotlinkly/#terms</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+</urlset>
