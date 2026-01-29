@@ -24,7 +24,6 @@
   <meta property="og:title" content="DotLinkly – program lojalnościowy bez kart i aplikacji" />
   <meta property="og:description" content="Tap/QR/NFC → 1–4 pytania → routing → eksport. Zbieraj leady i opinie bez aplikacji." />
   <meta property="og:url" content="https://dotlinkly.com/" />
-  <!-- Podmień na realny obrazek 1200x630 -->
   <meta property="og:image" content="https://dotlinkly.com/og.jpg" />
 
   <!-- Twitter -->
@@ -32,36 +31,9 @@
   <meta name="twitter:title" content="DotLinkly – program lojalnościowy bez kart i aplikacji" />
   <meta name="twitter:description" content="Tap/QR/NFC → 1–4 pytania → routing → eksport. Zbieraj leady i opinie bez aplikacji." />
   <meta name="twitter:image" content="https://dotlinkly.com/og.jpg" />
-</head>
-
-    
-
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
- <title>Program lojalnościowy bez kart i aplikacji | Nowoczesny system zbierania leadów i opinii klientów</title>
-  <meta name="description" content="Odkryj nowoczesne rozwiązania dla firm: program lojalnościowy bez konieczności kart i aplikacji, system do szybkiego zbierania kontaktów na targach, zarządzania procesami, zgłaszania awarii oraz zbierania opinii klientów. Efektywne narzędzia do automatyzacji i generowania leadów." />
-  <meta name="keywords" content="program lojalnościowy bez konieczności kart i aplikacji, program lojalnościowy online bez kart, system lojalnościowy bez aplikacji mobilnej, prosty program lojalnościowy dla klientów, nowoczesny system zbierania leadów, system generowania leadów dla firm, automatyczne zbieranie leadów na targach, efektywne narzędzia do lead, system do szybkiego zbierania kontaktów na targach, zbieranie kontaktów na eventach i targach, szybki system leadów na konferencjach, narzędzie do pozyskiwania kontaktów biznesowych, system do zgłaszania awarii w firmie, zgłaszanie usterek i awarii online, system raportowania problemów w przedsiębiorstwie, narzędzie do zarządzania awariami w firmie, rozwiązanie dla firm z procesami, optymalizacja procesów biznesowych w firmie, narzędzia do automatyzacji procesów firmowych, systemy wspierające procesy w przedsiębiorstwie, zarządzanie procesami w firmie, system zarządzania procesami biznesowymi, narzędzia do monitorowania procesów firmowych, efektywne zarządzanie workflow w firmie, system do zbierania opinii klientów, narzędzie do gromadzenia feedbacku od klientów, system ankiet i opinii klientów online, automatyczne zbieranie recenzji od klientów" />
-
-  <!-- Open Graph / social preview -->
-  <meta property="og:type" content="website" />
-  <meta property="og:locale" content="pl_PL" />
-  <meta property="og:site_name" content="DotLinkly" />
-  <meta property="og:title" content="Program lojalnościowy bez kart i aplikacji | DotLinkly" />
-  <meta property="og:description" content="Tap → 1–4 pytania → routing → ślad czasu. System do zbierania leadów i opinii bez aplikacji." />
-  <meta property="og:url" content="https://dotlinkly.com/" />
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Program lojalnościowy bez kart i aplikacji | DotLinkly" />
-  <meta name="twitter:description" content="Tap → 1–4 pytania → routing → ślad czasu. System do zbierania leadów i opinii bez aplikacji." />
-
-  <link rel="canonical" href="https://dotlinkly.com/" />
-  <meta name="robots" content="index,follow" />
 
   <!-- PROTOTYP ONLY -->
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
 
   <style>
     html { scroll-behavior: smooth; }
@@ -279,16 +251,22 @@ const COPY = {
       ],
       cta: "Umów rozmowę →"
     },
+
+    // SEO: krótkie H1 bez <br>. Długi copy przeniesiony do sub.
     hero: {
-      h1: `Każdego dnia tracisz potencjalne zyski...<br><br>Zmień to! Monitorując aktywność, obecność i ułatwiając feedback...`,
-      sub: `Tap → 1–4 pytania → routing → ślad czasu.<br>15–25 sekund i masz sygnał. Brak interakcji przez miesiąc? To też sygnał.`,
+      h1: "Tap → szybki sygnał z Twojego biznesu",
+      sub: `Każdego dnia tracisz potencjalne zyski, bo nie da się być wszędzie naraz.<br><br>
+            DotLinkly monitoruje aktywność, obecność i ułatwia feedback: Tap → 1–4 pytania → routing → ślad czasu.<br>
+            15–25 sekund i masz sygnał. Brak interakcji przez miesiąc? To też sygnał.`,
       pills: ["Bez aplikacji", "15–25 sekund", "Ślad czasu"],
-      micro: `Connect your dots. Minimum tarcia. Maksimum sygnału.`,
+      micro: "Connect your dots. Minimum tarcia. Maksimum sygnału.",
       cta: "Przetestuj flow ↓"
     },
+
+    // SEO: to jest H2 dla sekcji leadgen (zamiast „Jaką rolę pełnisz?")
     leadgen: {
-      title: "Jaką rolę pełnisz?",
-      subtitle: "Kliknij jedną opcję — pokażemy dopasowany efekt.",
+      title: "Nowoczesny system zbierania leadów",
+      subtitle: "Jaką rolę pełnisz? Kliknij jedną opcję — pokażemy dopasowany efekt.",
       roles: [
         {
           id:"smb",
@@ -336,8 +314,10 @@ const COPY = {
         sent: "Wysłane ✓"
       }
     },
+
+    // SEO: H2 z mechaniką
     how: {
-      title: "Jak to działa",
+      title: "Jak działa DotLinkly (Tap → pytania → routing)",
       steps: [
         { t:"1) Tap w miejscu", d:"Na ladzie, w toalecie, na drzwiach, przy maszynie." },
         { t:"2) 15–25 sekund", d:"Bez logowania, bez aplikacji, bez tarcia." },
@@ -345,10 +325,12 @@ const COPY = {
         { t:"4) Ślad", d:"Masz czas i historię — zamiast ustaleń na czacie." }
       ]
     },
+
     contact: {
       title: "Kontakt",
       sub: "Krótko. Bez spamu. Bez sprzedażowej papki."
     },
+
     footer: {
       links: [
         { href:"#privacy", label:"Polityka prywatności" },
@@ -357,6 +339,7 @@ const COPY = {
       ],
       note: "© 2026 DotLinkly"
     },
+
     legal: {
       privacyTitle: "Polityka prywatności (skrót)",
       privacyBody: `Strona ma charakter informacyjny. Dane podajesz wyłącznie dobrowolnie poprzez formularz kontaktowy. Nie zbieramy danych w tle. Logi serwera mogą zawierać standardowe metadane techniczne (np. IP) wymagane do bezpieczeństwa i utrzymania.`,
@@ -365,6 +348,7 @@ const COPY = {
       termsTitle: "Regulamin (skrót)",
       termsBody: `To nie jest sklep ani e-commerce. Strona prezentuje usługę i umożliwia kontakt.`
     },
+
     consent: {
       title: "Cookies",
       text: "Używamy cookies technicznych. Analitykę włączymy tylko po Twojej zgodzie.",
@@ -387,16 +371,22 @@ const COPY = {
       ],
       cta: "Book a 15-min call →"
     },
+
+    // SEO: short H1, long copy in sub
     hero: {
-      h1: `You lose money every day,<br>because you can’t be everywhere in your business.`,
-      sub: `Tap → 1–4 questions → routing → time-stamped trail.<br>15–25 seconds and you get a signal. No activity for a month? That’s also a signal.`,
+      h1: "Tap → a fast signal from your business",
+      sub: `You lose money every day because you can't be everywhere at once.<br><br>
+            DotLinkly monitors activity and makes feedback frictionless: Tap → 1–4 questions → routing → time-stamped trail.<br>
+            15–25 seconds and you get a signal. No activity for a month? That's also a signal.`,
       pills: ["No app", "15–25 seconds", "Time trail"],
-      micro: `Connect your dots. Minimum friction. Maximum signal.`,
+      micro: "Connect your dots. Minimum friction. Maximum signal.",
       cta: "Try the flow ↓"
     },
+
+    // SEO: H2 for leadgen section
     leadgen: {
-      title: "What’s your role?",
-      subtitle: "Pick one option — we’ll show a tailored outcome.",
+      title: "Modern lead capture system",
+      subtitle: "What's your role? Pick one option — we'll show a tailored outcome.",
       roles: [
         {
           id:"smb",
@@ -444,8 +434,9 @@ const COPY = {
         sent: "Sent ✓"
       }
     },
+
     how: {
-      title: "How it works",
+      title: "How DotLinkly works (Tap → questions → routing)",
       steps: [
         { t:"1) Tap on site", d:"At the counter, restroom, door, machine." },
         { t:"2) 15–25 seconds", d:"No login. No app. Minimal friction." },
@@ -453,10 +444,12 @@ const COPY = {
         { t:"4) Trail", d:"Time + history instead of chat promises." }
       ]
     },
+
     contact: {
       title: "Contact",
       sub: "Short. No spam. No sales fluff."
     },
+
     footer: {
       links: [
         { href:"#privacy", label:"Privacy Policy" },
@@ -465,6 +458,7 @@ const COPY = {
       ],
       note: "© 2026 DotLinkly"
     },
+
     legal: {
       privacyTitle: "Privacy policy (short)",
       privacyBody: `This site is informational. You provide data only by submitting the contact form. No background collection. Server logs may contain standard technical metadata (e.g., IP) for security and maintenance.`,
@@ -473,6 +467,7 @@ const COPY = {
       termsTitle: "Terms (short)",
       termsBody: `This is not an e-commerce store. The site presents the service and enables contact.`
     },
+
     consent: {
       title: "Cookies",
       text: "We use necessary cookies. Analytics will be enabled only with your consent.",
@@ -885,7 +880,4 @@ render();
 </script>
 </body>
 </html>
-    
-  </body>
-  
-</html>
+
